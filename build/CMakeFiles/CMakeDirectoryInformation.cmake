@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/lanpo/work/code/cpp/socket_epoll")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/lanpo/work/code/cpp/socket_epoll")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/lanpo/work/code/cpp/socket_epoll/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lanpo/work/code/cpp/socket_epoll/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lanpo/work/code/cpp/socket_epoll/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

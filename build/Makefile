@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/lanpo/work/code/cpp/socket_epoll
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lanpo/work/code/cpp/socket_epoll
+CMAKE_BINARY_DIR = /home/lanpo/work/code/cpp/socket_epoll/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lanpo/work/code/cpp/socket_epoll/CMakeFiles /home/lanpo/work/code/cpp/socket_epoll/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lanpo/work/code/cpp/socket_epoll/build/CMakeFiles /home/lanpo/work/code/cpp/socket_epoll/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lanpo/work/code/cpp/socket_epoll/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lanpo/work/code/cpp/socket_epoll/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

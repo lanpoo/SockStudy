@@ -33,6 +33,33 @@ void addfd(int epollfd, int fd, bool enable_et){
     epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &event);
 
 }
+void et(epoll_event* events, int number, int epollfd, int listenfd){
+    char buf[BUFFER_SIZE];
+    for(int i = 0; i < number; i++){
+        int sockfd = events[i].data.fd;
+        if(sockfd == listenfd){
+            SockAddr cliAddr;
+            socklen_t len = sizeof(cliAddr);
+            int connfd = accept(listenfd, (struct sockaddr*)&cliAddr, &len);
+            addfd(epollfd, connfd, true);
+        }else if(events[i].events & EPOLLIN){
+            cout << "event trigger once\n";
+            memset(buf, '\0', BUFFER_SIZE);
+            int ret = recv(sockfd, buf, BUFFER_SIZE - 1, 0);
+            if(ret < 0){
+                if((errno == EAGAIN) || (errno == EWOULDBLOCK)){
+                    cout << "read later\n";
+                }
+                close(sockfd);
+                break;
+            }else if(ret == 0){
+                close(sockfd);
+            }else{
+                printf("get %d bytes of content: %s\n", ret, buf);
+            }
+        }
+    }
+}
 
 void lt(epoll_event* events, int number, int epollfd, int listenfd){
     char buf[BUFFER_SIZE];
@@ -99,7 +126,7 @@ int main(int argc, char* argv[]){
             cout << "epoll failure\n";
             break;
         }
-        lt(events, MAX_EVENT_NUMBER, epollfd, listenfd);
+        et(events, MAX_EVENT_NUMBER, epollfd, listenfd);
 
     }
 

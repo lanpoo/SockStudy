@@ -1,4 +1,0 @@
-/home/lanpo/work/code/cpp/socket_epoll/CMakeFiles/rebuild_cache.dir
-/home/lanpo/work/code/cpp/socket_epoll/CMakeFiles/edit_cache.dir
-/home/lanpo/work/code/cpp/socket_epoll/CMakeFiles/server.dir
-/home/lanpo/work/code/cpp/socket_epoll/CMakeFiles/client.dir
