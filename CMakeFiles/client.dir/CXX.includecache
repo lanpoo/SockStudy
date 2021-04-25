@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lanpo/work/code/cpp/socket_epoll/client.cpp
+sys/types.h
+-
+stdlib.h
+-
+string.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+iostream
+-
+
