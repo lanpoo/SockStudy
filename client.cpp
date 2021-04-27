@@ -22,11 +22,18 @@ int main(int argc, char* argv[]){
     if(res < 0){
         cout << "error in conncet\n";
     }
-    string buf = "nmsdafffffffffffsdasfdsafsl";
-    if(send(sockfd, buf.c_str(), buf.size(), 0) < 0){
-        cout << "error in send\n";
-        return 0;
+    while(true){
+        string buf; 
+        cin >> buf;
+        if(buf == "abc"){
+            break;
+        }
+        if(send(sockfd, buf.c_str(), buf.size(), 0) < 0){
+            cout << "error in send\n";
+            return 0;
+        }
     }
+    
     close(sockfd);
     return 0;
 }

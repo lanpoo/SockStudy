@@ -38,6 +38,7 @@ void et(epoll_event* events, int number, int epollfd, int listenfd){
     for(int i = 0; i < number; i++){
         int sockfd = events[i].data.fd;
         if(sockfd == listenfd){
+            cout << "sockfd == listenfd\n";
             SockAddr cliAddr;
             socklen_t len = sizeof(cliAddr);
             int connfd = accept(listenfd, (struct sockaddr*)&cliAddr, &len);
@@ -53,6 +54,7 @@ void et(epoll_event* events, int number, int epollfd, int listenfd){
                 close(sockfd);
                 break;
             }else if(ret == 0){
+                cout << "ret = " << ret << endl;
                 close(sockfd);
             }else{
                 printf("get %d bytes of content: %s\n", ret, buf);
@@ -126,7 +128,7 @@ int main(int argc, char* argv[]){
             cout << "epoll failure\n";
             break;
         }
-        et(events, MAX_EVENT_NUMBER, epollfd, listenfd);
+        lt(events, ret, epollfd, listenfd);
 
     }
 
