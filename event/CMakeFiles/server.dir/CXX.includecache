@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lanpo/work/code/cpp/SocketStudy/event/server.cpp
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+assert.h
+-
+stdio.h
+-
+signal.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+fcntl.h
+-
+stdlib.h
+-
+sys/epoll.h
+-
+thread
+-
+iostream
+-
+

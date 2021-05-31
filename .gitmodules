@@ -1,0 +1,3 @@
+[submodule "SockStudy"]
+	path = SockStudy
+	url = https://github.com/lanpoo/SockStudy

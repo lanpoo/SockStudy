@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -pthread  -rdynamic CMakeFiles/clientTCP.dir/clientTCP.cpp.o  -o clientTCP 

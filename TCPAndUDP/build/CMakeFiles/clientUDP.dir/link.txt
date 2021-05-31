@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -pthread  -rdynamic CMakeFiles/clientUDP.dir/clientUDP.cpp.o  -o clientUDP 

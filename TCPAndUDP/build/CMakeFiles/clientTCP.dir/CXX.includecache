@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lanpo/work/code/cpp/TCPAndUDP/clientTCP.cpp
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+assert.h
+-
+stdio.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+fcntl.h
+-
+stdlib.h
+-
+sys/epoll.h
+-
+pthread.h
+-
+iostream
+-
+

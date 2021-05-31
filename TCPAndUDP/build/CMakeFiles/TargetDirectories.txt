@@ -1,0 +1,5 @@
+/home/lanpo/work/code/cpp/TCPAndUDP/build/CMakeFiles/rebuild_cache.dir
+/home/lanpo/work/code/cpp/TCPAndUDP/build/CMakeFiles/edit_cache.dir
+/home/lanpo/work/code/cpp/TCPAndUDP/build/CMakeFiles/clientUDP.dir
+/home/lanpo/work/code/cpp/TCPAndUDP/build/CMakeFiles/clientTCP.dir
+/home/lanpo/work/code/cpp/TCPAndUDP/build/CMakeFiles/server.dir
